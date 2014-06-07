@@ -1,0 +1,8 @@
+PROJECT_NAME           = "Sistemi Operativi - Elaborato 2 - Processi e IPC"
+OUTPUT_LANGUAGE        = Italian
+INPUT                  = .
+RECURSIVE              = YES
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_LATEX         = NO
+LATEX_OUTPUT           = latex

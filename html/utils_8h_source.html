@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Sistemi Operativi - Elaborato 2 - Processi e IPC:  File sorgente headers/utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Sistemi Operativi - Elaborato 2 - Processi e IPC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">utils.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="utils_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;dirent.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;malloc.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;sys/ipc.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sys/shm.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;sys/sem.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;sys/ipc.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;sys/wait.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sem_8h.html">sem.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shm_8h.html">shm.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define STDIN   0</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STDOUT  1</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define P_NAME  &quot;prog&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BUFLEN  512</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SIZE    1024</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define SEM_MAIN    1</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SEM_RAM     2</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SEM_SEZCR       3</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define TRUE 1</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FALSE !TRUE</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="unioncoda.html">   44</a></span>&#160;<span class="keyword">union </span><a class="code" href="unioncoda.html">coda</a>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="unioncoda.html#ac4e2ce0f79d38a497f5d8df083cada79">   46</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="unioncoda.html#ac4e2ce0f79d38a497f5d8df083cada79">sig</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> num;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> pos;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="unioncoda.html#a1ba0f5ed6ccbb9aaa5e9c7a4a5684cee">   50</a></span>&#160;    <span class="keyword">union </span><a class="code" href="unioncoda.html">coda</a> *<a class="code" href="unioncoda.html#a1ba0f5ed6ccbb9aaa5e9c7a4a5684cee">next</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="unioncoda.html">coda</a> <a class="code" href="unioncoda.html">coda</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="unionshm__struct.html">   58</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionshm__struct.html">shm_struct</a>{</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="unionshm__struct.html#a9ba3ff38af97aa0ccfff31bd66874460">   60</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="unionshm__struct.html#a9ba3ff38af97aa0ccfff31bd66874460">sem_id</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="unionshm__struct.html#a26653b9e986df423596499d7ff08d2f0">   62</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="unionshm__struct.html#a26653b9e986df423596499d7ff08d2f0">sig</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> num;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> pos;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> read;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="unionshm__struct.html#aaf9aee112867337d9d433e5ee6d15a08">   67</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="unionshm__struct.html#aaf9aee112867337d9d433e5ee6d15a08">counter</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="unionshm__struct.html">shm_struct</a> <a class="code" href="unionshm__struct.html">shms</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a89870518c2f96d684fd847a77627e320">syserr</a>(<span class="keywordtype">char</span> *prog, <span class="keywordtype">char</span> *msg);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="utils_8h.html#a4c28d0de81cae1c4e1efc6fdaff0b4fa">itoa</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a6483da854ca8076e0b947adaf1668954">print</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> *format, ... );</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#a2a8363df62c18515e131f2795ba7264f">num_elements</a>(<span class="keywordtype">char</span> *dirname);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#ab4d9f938af1ca42036781f23b66ba513">ctoi</a>(<span class="keywordtype">char</span> *car);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">char</span> <a class="code" href="utils_8h.html#a2c5560f6fa1ec97884bad33b02045d77">itoc</a>(<span class="keywordtype">int</span> op);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<a class="code" href="unioncoda.html">coda</a> *<a class="code" href="utils_8h.html#a04f1eb4a62c73c46793207ce602b88c6">read_file</a>(<span class="keywordtype">char</span> *file);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<a class="code" href="unioncoda.html">coda</a> *<a class="code" href="utils_8h.html#ab48685e0b3afa809a411e7c9efe01057">construct_coda</a>(<span class="keywordtype">char</span> c, <span class="keywordtype">int</span> value, <span class="keywordtype">int</span> pos, <a class="code" href="unioncoda.html">coda</a> *next);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#ad8b0ec065709f917393076ca2b575f13">length_coda</a>(<a class="code" href="unioncoda.html">coda</a> *<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a9a51c83d633f02c592de269d38783d56">print_coda</a>(<a class="code" href="unioncoda.html">coda</a> *<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<a class="code" href="unioncoda.html">coda</a> *<a class="code" href="utils_8h.html#a399c373284fd2e3b511c2abc57f30b65">coda_creat</a>(<span class="keywordtype">int</span> n);</div>
+<div class="ttc" id="unioncoda_html"><div class="ttname"><a href="unioncoda.html">coda</a></div><div class="ttdoc">Struttura per la lettura dei file di configurazione. </div><div class="ttdef"><b>Definition:</b> utils.h:44</div></div>
+<div class="ttc" id="shm_8h_html"><div class="ttname"><a href="shm_8h.html">shm.h</a></div><div class="ttdoc">Header file relativo alla gestione della memoria condivisa. </div></div>
+<div class="ttc" id="unioncoda_html_ac4e2ce0f79d38a497f5d8df083cada79"><div class="ttname"><a href="unioncoda.html#ac4e2ce0f79d38a497f5d8df083cada79">coda::sig</a></div><div class="ttdeci">char sig</div><div class="ttdoc">Carattere che indica il comando da eseguire. </div><div class="ttdef"><b>Definition:</b> utils.h:46</div></div>
+<div class="ttc" id="utils_8h_html_a2a8363df62c18515e131f2795ba7264f"><div class="ttname"><a href="utils_8h.html#a2a8363df62c18515e131f2795ba7264f">num_elements</a></div><div class="ttdeci">int num_elements(char *dirname)</div><div class="ttdoc">Ritorna un intero contenente il numero di elementi della directory dirname. Considera soltanto i file...</div><div class="ttdef"><b>Definition:</b> utils.c:35</div></div>
+<div class="ttc" id="unioncoda_html_a1ba0f5ed6ccbb9aaa5e9c7a4a5684cee"><div class="ttname"><a href="unioncoda.html#a1ba0f5ed6ccbb9aaa5e9c7a4a5684cee">coda::next</a></div><div class="ttdeci">union coda * next</div><div class="ttdoc">Coda della lista. </div><div class="ttdef"><b>Definition:</b> utils.h:50</div></div>
+<div class="ttc" id="sem_8h_html"><div class="ttname"><a href="sem_8h.html">sem.h</a></div></div>
+<div class="ttc" id="utils_8h_html_a89870518c2f96d684fd847a77627e320"><div class="ttname"><a href="utils_8h.html#a89870518c2f96d684fd847a77627e320">syserr</a></div><div class="ttdeci">void syserr(char *prog, char *msg)</div><div class="ttdoc">Stampa a video l&#39;errore di sistema. Utilizza la funzione print() </div><div class="ttdef"><b>Definition:</b> utils.c:16</div></div>
+<div class="ttc" id="utils_8h_html_a2c5560f6fa1ec97884bad33b02045d77"><div class="ttname"><a href="utils_8h.html#a2c5560f6fa1ec97884bad33b02045d77">itoc</a></div><div class="ttdeci">char itoc(int op)</div><div class="ttdoc">Funzione che converte un intero in carattere. Opposta alla char_to_int() </div><div class="ttdef"><b>Definition:</b> utils.c:70</div></div>
+<div class="ttc" id="utils_8h_html_ad8b0ec065709f917393076ca2b575f13"><div class="ttname"><a href="utils_8h.html#ad8b0ec065709f917393076ca2b575f13">length_coda</a></div><div class="ttdeci">int length_coda(coda *this)</div><div class="ttdoc">Funzione che ritorna la lunghezza della lista. </div><div class="ttdef"><b>Definition:</b> utils.c:198</div></div>
+<div class="ttc" id="utils_8h_html_a04f1eb4a62c73c46793207ce602b88c6"><div class="ttname"><a href="utils_8h.html#a04f1eb4a62c73c46793207ce602b88c6">read_file</a></div><div class="ttdeci">coda * read_file(char *file)</div><div class="ttdoc">Funzione necessaria per il recupero degli elementi scritti nei file di configurazione. </div><div class="ttdef"><b>Definition:</b> utils.c:81</div></div>
+<div class="ttc" id="unionshm__struct_html_a9ba3ff38af97aa0ccfff31bd66874460"><div class="ttname"><a href="unionshm__struct.html#a9ba3ff38af97aa0ccfff31bd66874460">shm_struct::sem_id</a></div><div class="ttdeci">int sem_id</div><div class="ttdoc">ID del semaforo. </div><div class="ttdef"><b>Definition:</b> utils.h:60</div></div>
+<div class="ttc" id="unionshm__struct_html_aaf9aee112867337d9d433e5ee6d15a08"><div class="ttname"><a href="unionshm__struct.html#aaf9aee112867337d9d433e5ee6d15a08">shm_struct::counter</a></div><div class="ttdeci">int counter</div><div class="ttdoc">Contatore per segnalare alla RAM che tutti le CPU hanno terminato il proprio lavoro. </div><div class="ttdef"><b>Definition:</b> utils.h:67</div></div>
+<div class="ttc" id="unionshm__struct_html"><div class="ttname"><a href="unionshm__struct.html">shm_struct</a></div><div class="ttdoc">Struttura per la scrittura sulla memoria condivisa. </div><div class="ttdef"><b>Definition:</b> utils.h:58</div></div>
+<div class="ttc" id="utils_8h_html_a6483da854ca8076e0b947adaf1668954"><div class="ttname"><a href="utils_8h.html#a6483da854ca8076e0b947adaf1668954">print</a></div><div class="ttdeci">void print(const char *format,...)</div><div class="ttdoc">Stampa a video la stringa in input. Utilizza la system call write() </div><div class="ttdef"><b>Definition:</b> utils.c:22</div></div>
+<div class="ttc" id="utils_8h_html_ab4d9f938af1ca42036781f23b66ba513"><div class="ttname"><a href="utils_8h.html#ab4d9f938af1ca42036781f23b66ba513">ctoi</a></div><div class="ttdeci">int ctoi(char *car)</div><div class="ttdoc">Funzione che converte il carattere passato in input in intero. </div><div class="ttdef"><b>Definition:</b> utils.c:59</div></div>
+<div class="ttc" id="utils_8h_html_a9a51c83d633f02c592de269d38783d56"><div class="ttname"><a href="utils_8h.html#a9a51c83d633f02c592de269d38783d56">print_coda</a></div><div class="ttdeci">void print_coda(coda *this)</div><div class="ttdoc">funzione che stampa la lista </div><div class="ttdef"><b>Definition:</b> utils.c:213</div></div>
+<div class="ttc" id="utils_8h_html_a4c28d0de81cae1c4e1efc6fdaff0b4fa"><div class="ttname"><a href="utils_8h.html#a4c28d0de81cae1c4e1efc6fdaff0b4fa">itoa</a></div><div class="ttdeci">char * itoa(int n)</div><div class="ttdoc">Converte il numero passato in array di caratteri (stringa). </div><div class="ttdef"><b>Definition:</b> utils.c:9</div></div>
+<div class="ttc" id="utils_8h_html_a399c373284fd2e3b511c2abc57f30b65"><div class="ttname"><a href="utils_8h.html#a399c373284fd2e3b511c2abc57f30b65">coda_creat</a></div><div class="ttdeci">coda * coda_creat(int n)</div><div class="ttdoc">Funzione che crea la lista dal numero del processo. </div><div class="ttdef"><b>Definition:</b> utils.c:224</div></div>
+<div class="ttc" id="utils_8h_html_ab48685e0b3afa809a411e7c9efe01057"><div class="ttname"><a href="utils_8h.html#ab48685e0b3afa809a411e7c9efe01057">construct_coda</a></div><div class="ttdeci">coda * construct_coda(char c, int value, int pos, coda *next)</div><div class="ttdoc">Funzione che costruisce la lista generata dalla funzione read_file() </div><div class="ttdef"><b>Definition:</b> utils.c:203</div></div>
+<div class="ttc" id="unionshm__struct_html_a26653b9e986df423596499d7ff08d2f0"><div class="ttname"><a href="unionshm__struct.html#a26653b9e986df423596499d7ff08d2f0">shm_struct::sig</a></div><div class="ttdeci">char sig</div><div class="ttdoc">Carattere che indica il comando da eseguire. </div><div class="ttdef"><b>Definition:</b> utils.h:62</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato Mer 4 Giu 2014 20:22:30 per Sistemi Operativi - Elaborato 2 - Processi e IPC da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
